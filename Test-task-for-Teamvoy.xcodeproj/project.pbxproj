@@ -13,9 +13,13 @@
 		7D84ABFE1FFAA056003A64D9 /* Test_task_for_Teamvoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D84ABFC1FFAA056003A64D9 /* Test_task_for_Teamvoy.xcdatamodeld */; };
 		7D84AC001FFAA056003A64D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D84ABFF1FFAA056003A64D9 /* Assets.xcassets */; };
 		7D84AC031FFAA056003A64D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D84AC011FFAA056003A64D9 /* LaunchScreen.storyboard */; };
+		7D84AC0C1FFBE167003A64D9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D84AC0B1FFBE167003A64D9 /* MapKit.framework */; };
+		ED467C8B29FEB735F11D976D /* Pods_Test_task_for_Teamvoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E80690AC6B71D128C9D55CE /* Pods_Test_task_for_Teamvoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17102135A099B377BEA0DD49 /* Pods-Test-task-for-Teamvoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-task-for-Teamvoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test-task-for-Teamvoy/Pods-Test-task-for-Teamvoy.debug.xcconfig"; sourceTree = "<group>"; };
+		3E80690AC6B71D128C9D55CE /* Pods_Test_task_for_Teamvoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_task_for_Teamvoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D84ABF21FFAA056003A64D9 /* Test-task-for-Teamvoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-task-for-Teamvoy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D84ABF51FFAA056003A64D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D84ABF71FFAA056003A64D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		7D84ABFF1FFAA056003A64D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D84AC021FFAA056003A64D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D84AC041FFAA056003A64D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D84AC0B1FFBE167003A64D9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F1E87D0FF44F6FF00910AD91 /* Pods-Test-task-for-Teamvoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-task-for-Teamvoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test-task-for-Teamvoy/Pods-Test-task-for-Teamvoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D84AC0C1FFBE167003A64D9 /* MapKit.framework in Frameworks */,
+				ED467C8B29FEB735F11D976D /* Pods_Test_task_for_Teamvoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10C3D912173EC27EBCEA3E7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17102135A099B377BEA0DD49 /* Pods-Test-task-for-Teamvoy.debug.xcconfig */,
+				F1E87D0FF44F6FF00910AD91 /* Pods-Test-task-for-Teamvoy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D84ABE91FFAA056003A64D9 = {
 			isa = PBXGroup;
 			children = (
 				7D84ABF41FFAA056003A64D9 /* Test-task-for-Teamvoy */,
 				7D84ABF31FFAA056003A64D9 /* Products */,
+				7D84AC0A1FFBE167003A64D9 /* Frameworks */,
+				10C3D912173EC27EBCEA3E7F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,15 @@
 			path = "Test-task-for-Teamvoy";
 			sourceTree = "<group>";
 		};
+		7D84AC0A1FFBE167003A64D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D84AC0B1FFBE167003A64D9 /* MapKit.framework */,
+				3E80690AC6B71D128C9D55CE /* Pods_Test_task_for_Teamvoy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D84AC071FFAA056003A64D9 /* Build configuration list for PBXNativeTarget "Test-task-for-Teamvoy" */;
 			buildPhases = (
+				8F4F5A759D47CBAE67A19F30 /* [CP] Check Pods Manifest.lock */,
 				7D84ABEE1FFAA056003A64D9 /* Sources */,
 				7D84ABEF1FFAA056003A64D9 /* Frameworks */,
 				7D84ABF01FFAA056003A64D9 /* Resources */,
+				E51FE1CDC86822024F1FC155 /* [CP] Embed Pods Frameworks */,
+				E5A44629C38D639DB89A1E89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +131,11 @@
 					7D84ABF11FFAA056003A64D9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,6 +169,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F4F5A759D47CBAE67A19F30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-task-for-Teamvoy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E51FE1CDC86822024F1FC155 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Test-task-for-Teamvoy/Pods-Test-task-for-Teamvoy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test-task-for-Teamvoy/Pods-Test-task-for-Teamvoy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5A44629C38D639DB89A1E89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test-task-for-Teamvoy/Pods-Test-task-for-Teamvoy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D84ABEE1FFAA056003A64D9 /* Sources */ = {
@@ -276,6 +366,7 @@
 		};
 		7D84AC081FFAA056003A64D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17102135A099B377BEA0DD49 /* Pods-Test-task-for-Teamvoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +381,7 @@
 		};
 		7D84AC091FFAA056003A64D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E87D0FF44F6FF00910AD91 /* Pods-Test-task-for-Teamvoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
