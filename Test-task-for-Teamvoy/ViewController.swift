@@ -16,15 +16,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     let locationManager = CLLocationManager()
     private var currentLocation: CLLocation?
+    private var currentSunDetails : SunDetails?
     
     @IBAction func showSunDetailsForCurrentLocation(_ sender: UIButton) {
-        
-        Alamofire.request("https://httpbin.org/get", parameters: ["foo": "bar"])
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
-            .response { response in
-                // response handling code
+        self.getSunDetails(CGPoint()) { dictionary in
+            
+            if let json = dictionary["results"] as? [String: Any] {
+                if let sunDetails = SunDetails.init(json: json) {
+                    
+                    self.currentSunDetails = sunDetails
+                    self.prepare(for: UIStoryboardSegue.init(identifier: "showSunDetails", source: self, destination: self), sender: self)
+                }
+            }
         }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +45,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSunDetails" {
+            if let vc = segue.destination as? SunDetailsTableViewController {
+                //vc.brandName = self.brandName
+            }
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         defer { currentLocation = locations.last }
         
@@ -48,6 +61,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             if let userLocation = locations.last {
                 let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 200, 200)
                 mapView.setRegion(viewRegion, animated: false)
+            }
+        }
+    }
+    
+    private func getSunDetails(_ location:CGPoint, completionHandler: @escaping (_ result: NSDictionary) -> Void) -> Void {
+        
+        let headers: HTTPHeaders = [
+            "Accept": "application/json",
+            "Content-Type" :"application/json"
+        ]
+        
+        let completeURL = "https://api.sunrise-sunset.org/json"
+        
+        Alamofire.request(completeURL, method: .get, parameters: ["lat": location.x, "lng": location.y], encoding: URLEncoding.default, headers: headers).responseJSON { response in
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)") // your JSONResponse result
+                completionHandler(JSON as! NSDictionary)
+            }
+            else {
+                print(response.result.error!)
             }
         }
     }
