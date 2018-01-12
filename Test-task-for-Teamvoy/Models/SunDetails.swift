@@ -56,11 +56,10 @@ extension SunDetails {
 extension DateFormatter {
     func getLocalTime(from utcTime:String) -> String {
 
-        self.dateFormat = "'T'HH:mm:ss"
+        self.dateFormat = "hh:mm:ss a"
         self.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         let date = self.date(from: utcTime)
         
-        self.dateFormat = "h:mm a"
         self.timeZone = NSTimeZone.local
         let timeStamp = self.string(from: date!)
         

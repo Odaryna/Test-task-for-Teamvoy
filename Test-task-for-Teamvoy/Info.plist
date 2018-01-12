@@ -3,8 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>bnmbbmbmn</string>
-	<key>Privacy – Location When In Use Usage Description</key>
 	<string>To show you cool things nearby</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
